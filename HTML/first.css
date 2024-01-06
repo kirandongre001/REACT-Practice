@@ -1,0 +1,10 @@
+
+.main{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.right_main{
+    margin: 40px;
+}
