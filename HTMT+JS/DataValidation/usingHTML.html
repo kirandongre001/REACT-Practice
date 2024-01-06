@@ -1,0 +1,15 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <form>
+            Birth Date:<input name="dob" type="date" min="2000-10-01" max="2023-12-10"/>
+            Date:<input type="text" name="data" required minlength="3" maxlength="9"/>
+            <label for="cc">
+               Country code:
+            </label>
+            <input type="text" id="cc" name="cc" pattern="[A-Za-z]{3}" title="3 letter code"/>
+            <input type="submit" value="OK"/>
+        </form>
+    </body>
+</html>

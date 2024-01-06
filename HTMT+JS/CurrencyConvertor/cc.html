@@ -1,0 +1,119 @@
+<html>
+    <head>
+        <script>
+            function f1()
+            {
+                let num=document.getElementById("value").value 
+                let ch1=document.getElementById("from").value
+                let ch2=document.getElementById("to").value 
+                let result
+            switch(ch2)
+            {
+                case "dollar":
+                    switch(ch1)
+                     {
+                      case "dollar":
+                          result=num*1;break
+                      case "rupee":
+                          result=num*0.01199;break
+                      case "yen":
+                          result=num*0.0069;break
+                      case "euro":
+                          result=num*1.077;break
+                      case "pound":
+                           result=num*1.254;break     
+                    }
+                  // document.getElementById("change").value=result;
+                  document.getElementById("change").innerHTML=result+"  <span>&#36;</span>";break
+                case "rupee":
+                     switch(ch1)
+                    {
+                     case "dollar":
+                     result=num*83.43;break
+                     case "rupee":
+                     result=num*1;break
+                     case "yen":
+                     result=num*0.575;break
+                     case "euro":
+                     result=num*89.88;break
+                     case "pound":
+                     result=num*104.68;break
+                    }
+                    //document.getElementById("change").value=result;break
+                    document.getElementById("change").innerHTML=result+"  <span>&#8377;</span>";break 
+                 case "yen":
+                    switch(ch1)
+                    {
+                     case "dollar":
+                     result=num*144.86;break
+                     case "rupee":
+                     result=num*1.736;break
+                     case "yen":
+                     result=num*1;break
+                     case "euro":
+                     result=num*156.06;break
+                     case "pound":
+                     result=num*181.77;break
+                    }
+                    //document.getElementById("change").value=result;break
+                    document.getElementById("change").innerHTML=result+"  <span>&yen;</span>";break
+                 case "euro":
+                    switch(ch1)
+                    {
+                     case "dollar":
+                     result=num*0.928;break
+                     case "rupee":
+                     result=num*0.011;break
+                     case "yen":
+                     result=num*0.006;break
+                     case "euro":
+                     result=num*1;break
+                     case "pound":
+                     result=num*1.164;break
+                    }
+                    //document.getElementById("change").value=result;break
+                    document.getElementById("change").innerHTML=result+"  <span>&euro;</span>";break
+                 case "pound":
+                    switch(ch2)
+                    {
+                      case "dollar":
+                      result=num*0.796;break
+                      case "rupee":
+                      result=num*0.009;break
+                      case "yen":
+                      result=num*0.0055;break
+                      case "euro":
+                      result=num*0.858;break
+                      case "pound":
+                      result=num*1;break
+                    }
+                   // document.getElementById("change").value=result;break
+                   document.getElementById("change").innerHTML=result+"  <span>&pound;</span>";break
+            }
+        }
+        </script>
+    </head>
+    <body>
+        <h2>Currency Convertor</h2>
+        Currency:<input type="number" id="value">
+        From:<select id="from">
+            <option>--</option>
+            <option>dollar</option>
+            <option>rupee</option>
+            <option>yen</option>
+            <option>euro</option>
+            <option>pound</option>
+        </select>
+        To:<select id="to">
+            <option>--</option>
+            <option>dollar</option>
+            <option>rupee</option>
+            <option>yen</option>
+            <option>euro</option>
+            <option>pound</option>
+        </select>
+        <input type="button" value="Convert" onclick="f1()"/>
+        <!-- <input type="text" id="change"/> -->
+        <span style="border: 1px solid;" id="change"></span>
+    </body>
+</html>

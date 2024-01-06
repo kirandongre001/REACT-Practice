@@ -1,0 +1,36 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        Number 1:<input type="number" id="id1"/>
+        Number 2:<input type="number" id="id2"/>
+        Select Operation:<select id="id3" onchange="calculate()">
+            <option>select</option>
+            <option>+</option>
+            <option>-</option>
+            <option>*</option>
+            <option>/</option>
+        </select>
+        <p>Result:<span id="id4"></span></p>
+        <script>
+          function calculate(){
+            let x=parseInt(document.getElementById("id1").value)
+            let y=parseInt(document.getElementById("id2")["value"])
+            let op=document.getElementById("id3").value
+
+            let result
+            switch(op){
+                case '+':result=x+y; break
+                case '-':result=x-y;break
+                case '*':result=x*y;break
+                case '/':result=x/y;break
+            }
+            //document.getElementById("id4").innerHTML=
+            let output=x+op+y+"="+result
+           // let output=`${x} ${op} ${y}=${result}`
+            document.getElementById("id4").innerHTML=output
+          }
+        </script>
+    </body>
+</html>

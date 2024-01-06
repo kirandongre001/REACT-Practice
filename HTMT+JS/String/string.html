@@ -1,0 +1,26 @@
+<html>
+    <head>
+    </head>
+    <body>
+      <label>
+        String:<input type="text" id="id1" onblur="f1()"/>
+        <input type="button" value="Upper Case" onclick="f2()"/>
+        <fieldset id="id2"></fieldset>
+      </label>
+
+      <script>
+       function f1()
+        {
+        let s=document.getElementById("id1").value
+        console.log(s)
+        }
+        function f2()
+        {
+          let str=document.getElementById("id1").value
+          let uc=str.toUpperCase()
+          console.log(uc)
+          document.getElementById("id2").innerHTML=uc
+        }
+      </script>
+    </body>
+</html>

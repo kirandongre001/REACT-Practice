@@ -1,0 +1,65 @@
+<html>
+    <head>
+       <script>
+        //   function f1()
+        //   {
+        //     let f=document.getElementById("first").value
+        //     let l=document.getElementById("last").value
+        //     let print
+        //     switch(f)
+        //     {
+        //         case "Mr":
+        //               let first=l.charAt(0).toUpperCase()
+        //               let second=l.substring(1).toLowerCase()
+        //               print=f+" "+first+second
+        //         case "Mrs":
+        //               let first1=l.charAt(0).toUpperCase()
+        //               let second1=l.substring(1).toLowerCase()
+        //               print=f+" "+first1+second1
+        //     }
+        //     document.getElementById("title").value=print
+        //   }
+
+        function f1()
+          {
+            let f=document.getElementById("first").value
+            let l=document.getElementById("last").value
+            let first=l.charAt(0).toUpperCase()
+            let second=l.substring(1).toLowerCase()
+            let print
+            if(f=="Mr")
+            {
+                      print=f+" "+first+second
+            }
+            if(f=="Madam"){
+                      print=f+" "+first1+second1
+            }
+            document.getElementById("title").value=print
+          }
+        
+       </script>
+    </head>
+    <body>
+        FRIST NAME:
+        <select id="first">
+            <option>--</option>
+            <option>Mr</option>
+            <option>Madam</option>
+        </select><input type="text"/>
+        LAST NAME:<input type="text" id="last"/>
+        <br/>
+        <div>
+        <br/>
+            Gender:<br/>
+            <label>
+                Male<input type="radio" name="r1" onclick="f1()"/>
+            </label>
+            <label>
+                Female:<input type="radio" name="r1" onclick="f1()"/>
+            </label>
+        </div>
+        <hr/>
+            Title:<input type="text" id="title"/>
+
+    </body>
+</html>

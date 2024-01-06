@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <script>
+            function f1()
+            {
+             var s=document.getElementById("input").value
+            let uc=s.toUpperCase()
+            document.getElementById("string").value=uc
+           }
+
+           function f2()
+           {
+            let s=document.getElementById("input").value
+            let lc=s.toLowerCase()
+            document.getElementById("string").value=lc
+           }
+
+           function f3()
+           {
+            let s=document.getElementById("input").value
+            let tc1=s.charAt(0).toUpperCase()
+            let tc2=s.substring(1).toLowerCase()
+            let tc=tc1+tc2
+            document.getElementById("string").value=tc
+           }
+        </script>
+    </head>
+    <body>
+        String:<input type="text" id="input"/>
+        <br/>
+        <label>
+            Upper Case<input id="i1" type="radio" name="r1" onclick="f1()"/>
+            Lower Case<input id="i2" type="radio" name="r1" onclick="f2()"/>
+            Title Case<input id="i3" type="radio" name="r1" onclick="f3()"/>
+        </label>
+        <hr/>
+        <div>
+            New String:<input type="text" id="string"/>
+        </div>
+   
+    </body>
+</html>
