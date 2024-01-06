@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <script src="./jquery-3.6.0.js"></script>
+        <script>
+            $().ready(()=>{
+                let a=["red","green","blue"]
+                 a.forEach((e)=>{
+                 $("select").append(`<option>${e}</option>`)
+               })
+               $("#t1").change(()=>{
+                let v=$("#t1").val()
+                a.push(v)
+                $("select").html("")
+                a.forEach((e)=>{
+                 $("select").append(`<option>${e}</option>`)
+               })
+            }) 
+                // for(i=1;i<=100;i++){
+                //     $("select").append(`<option>${i}</option>`)
+                // }
+             })  
+        </script>
+    </head>
+    <body>
+        <div>
+           Enter option: <input type="text" id="t1"/>
+            Select:
+            <select>
+            </select>
+        </div>
+    </body>
+</html>
